@@ -1,0 +1,10 @@
+//write a program to add 8 bit numbers stored at internal RAM locations 20h and 21H stored sum at 22H and carry at 23h
+ORG 00H
+START:MOV R2,#00H
+MOV A,20H
+MOV A,21H
+JNC SKIP
+INC R2
+SKIP:MOV 22H,A
+MOV 23H,R2
+HERE:SJMP HERE
